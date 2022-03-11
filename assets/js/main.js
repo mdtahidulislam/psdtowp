@@ -1,8 +1,8 @@
 (function ($) {
     "use strict";
     jQuery(document).ready(function ($) {
-        // ===========================================
-        // Homepage--texttilt
+
+        // texttilt
         const tilt = $('.ph-caption-title').tilt({
             maxTilt:        15,
             perspective:    1000,   // Transform perspective, the lower the more extreme the tilt gets.
@@ -15,6 +15,21 @@
             glare:          false,  // Enables glare effect
             maxGlare:       1       // From 0 - 1.
         });
+        
+        // cursor view project on hover
+        if ($("[data-cursor]").length) {
+            $("[data-cursor]").on("mouseenter", function() {
+                $('.circle-cursor').css({'mix-blend-mode': 'normal'});
+                $('.inner-ball').css({'visibility': 'visible'}).append('<div class="ballview"></div>');
+                $(".ballview").append($(this).attr("data-cursor"));
+                gsap.to('.inner-ball', { duration: 0.3, yPercent: -50, width: 95, height: 95, opacity: 1, borderWidth: 0, backgroundColor: "#FFF" });
+                gsap.to(".ballview", { duration: 0.3, scale: 1, autoAlpha: 1 });
+            }).on("mouseleave", function() {
+                gsap.to('.inner-ball', { duration: 0.3, yPercent: -50, backgroundColor: "transparent" });
+                gsap.to(".ballview", { duration: 0.3, scale: 0, autoAlpha: 0, clearProps:"all" });
+                $('.inner-ball').find(".ballview").remove();
+            });
+        }
     });
 }(jQuery));
 // -============================================================================
