@@ -25,9 +25,10 @@
                 gsap.to('.inner-ball', { duration: 0.3, yPercent: -50, width: 95, height: 95, opacity: 1, borderWidth: 0, backgroundColor: "#FFF" });
                 gsap.to(".ballview", { duration: 0.3, scale: 1, autoAlpha: 1 });
             }).on("mouseleave", function() {
+                $('.circle-cursor').css({'mix-blend-mode': 'difference'});
                 gsap.to('.inner-ball', { duration: 0.3, yPercent: -50, backgroundColor: "transparent" });
                 gsap.to(".ballview", { duration: 0.3, scale: 0, autoAlpha: 0, clearProps:"all" });
-                $('.inner-ball').find(".ballview").remove();
+                $('.inner-ball').css({'visibility': 'hidden'}).find(".ballview").remove();
             });
         }
     });
