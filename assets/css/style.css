@@ -20,6 +20,12 @@ html {
 .circle-cursor--link {
   transform: translate(-50%, -50%) scale(1);
 }
+.circle-cursor--testimonial {
+  background: transparent;
+  width: 100px;
+  height: 100px;
+  border: 2px solid #fff;
+}
 .cursor-none {
   cursor: none;
 }
@@ -37,4 +43,64 @@ html {
   color: #000;
   top: 50%;
   visibility: hidden;
+}
+
+.inner-ball--testimonial {
+  background: transparent;
+}
+
+/* testimonial slider */
+@media (min-width: 1025px) {
+  .tt-testimonials-slider .swiper-slide {
+    max-width: 796px;
+    margin-left: 2vw;
+    margin-right: 2vw;
+  }
+}
+
+/* ball drag */
+/* Ball drag 
+============= */
+.inner-ball .ball-drag {
+  position: absolute;
+  display: block;
+  width: 100%;
+  padding: 0 5px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+  line-height: 1.2;
+  text-align: center;
+  transition: all 0.3s;
+}
+.inner-ball .ball-drag::before,
+.inner-ball .ball-drag::after {
+  position: absolute;
+  top: 50%;
+  margin-top: -5px;
+  font-size: 19px;
+  color: #fff;
+  /* height: 10px;
+  line-height: 10px; */
+
+  /* Font Awesome */
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+.inner-ball .ball-drag::before {
+  content: "\f104"; /* Font Awesome */
+  left: 0;
+  transform: translate3d(-30px, -50%, 0);
+  transition: all 0.25s;
+}
+.inner-ball .ball-drag::after {
+  content: "\f105"; /* Font Awesome */
+  right: 0;
+  transform: translate3d(30px, -50%, 0);
+  transition: all 0.25s;
 }
