@@ -48,6 +48,26 @@
             }
           }
         }
+
+        
+        gsap.registerPlugin(ScrollTrigger);
+        // projects horizontal scroll
+        if ($(window).width() > 1024){
+          if ($('.projects-single').length) {
+            let sections = document.querySelectorAll('.projects-wrapper');
+            gsap.to(sections, {
+              xPercent: -64,
+              ease: "none",
+              scrollTrigger: {
+                trigger: "#projects",
+                pin: true,
+                scrub: 0.3,
+                start: "center center",
+                end: '+=100%',
+              }
+            });
+          }
+        }
     });
 }(jQuery));
 // -============================================================================

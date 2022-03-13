@@ -104,3 +104,59 @@ html {
   transform: translate3d(30px, -50%, 0);
   transition: all 0.25s;
 }
+
+/* projects */
+.projects-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  left: 250px;
+  width: 200%;
+}
+
+.projects-single {
+  margin-right: 30px;
+  width: 450px;
+}
+
+.projects-single:last-child {
+  margin-right: 0;
+}
+
+div#projects {
+  position: relative;
+  overflow: hidden;
+}
+
+.projects-img img {
+  width: 100%;
+  height: 100%;
+}
+
+.projects-single a {
+  display: block;
+}
+
+@media (max-width: 1024px) {
+  .projects-wrapper {
+    left: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding-bottom: 50px;
+    overflow: hidden;
+    max-width: 100%;
+  }
+  .projects-single {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    margin-bottom: 50px;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    overflow: hidden;
+  }
+}
