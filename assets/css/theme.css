@@ -78,7 +78,7 @@ html, body {
 
 body {
 	position: relative;
-	background-color: #0a0a0a;
+	background-color: #000;
 	line-height: 1.7;
 	font-size: 19px;
 	font-weight: normal;
@@ -1967,12 +1967,50 @@ a.ph-category:hover {
 	margin-top: 50px;
 	z-index: 9;
 }
-
+.ph-subt-parallax {
+    font-size: 16px;
+    color: #fff;
+}
+.ph-caption-subtitle.ph-appear {
+    margin-top: 15px;
+}
+#page-header.ph-cap-sm .ph-caption-title {
+    font-size: 75px;
+}
+.ph-subt-parallax{
+	font-family: 'Poppins', sans-serif;
+	font-weight: 300;
+}
+.ph-subt-parallax strong{
+	font-weight: 500;
+}
 /* page header caption paragraph */
 .ph-caption > p {
 	position: relative;
 	max-width: 900px;
 	z-index: 9;
+	font-size: 14px;
+	margin-bottom: 0;
+}
+.btn-block {
+    margin-top: 30px;
+	position: relative;
+    z-index: 9;
+}
+
+.btn-block>a {
+    display: inline-block;
+    background: #242526;
+    font-weight: 500;
+    font-size: 15px;
+    border: 1px solid #242526;
+    padding: 5px 21px;
+    margin-right: 5px;
+}
+
+.btn-block>a:first-child {
+    background: #CC2112;
+    border-color: #CC2112;
 }
 .ph-caption .ph-caption-title + p,
 .ph-caption .ph-caption-title-ghost + p,
@@ -8920,4 +8958,32 @@ body:not(.tt-boxed) .tt-footer-inner,
 	#tt-footer .footer-social .footer-social-text {
 		display: none;
 	}
+}
+.tt-accordion.tt-ac-xlg .tt-ac-head-title {
+    font-size: 20px;
+    letter-spacing: 3px;
+    font-weight: 300;
+}
+
+.tt-accordion.tt-ac-xlg .tt-accordion-heading {
+    padding: 20px 0px;
+}
+
+.tt-accordion-caret {
+    width: 15px;
+    height: 15px;
+    opacity: 1;
+}
+
+.tt-accordion-content p {
+    font-size: 16px;
+    opacity: 1;
+    margin-bottom: 0;
+}
+
+.tt-btn.tt-btn-link {
+    margin-bottom: -20px;
+}
+
+.tt-accordion-caret::before, .tt-accordion-caret::after {
 }

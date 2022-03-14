@@ -54,7 +54,7 @@
     // Cursor effect
     document.addEventListener("DOMContentLoaded", function(event) {
         var cursor = document.querySelector(".circle-cursor");
-        var links = document.querySelectorAll("a:not(.btn)");
+        var links = document.querySelectorAll("a:not(.btn), h1, h2, .btn-block>a");
         // var links = document.querySelectorAll("a:not(.btn), h1, .nav-icon, h2, .indutries-home .section-content p, .industries-list>p");
         var initCursor = false;
       
