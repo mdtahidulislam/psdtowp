@@ -19,12 +19,18 @@
         // cursor view project on hover
         if ($("[data-cursor]").length) {
             $("[data-cursor]").on("mouseenter", function() {
+                if ($('.projects-single').length) {
+                   $('.circle-cursor').addClass('circle-cursor--link');
+                }
                 $('.circle-cursor').css({'mix-blend-mode': 'normal'});
                 $('.inner-ball').css({'visibility': 'visible'}).append('<div class="ballview"></div>');
                 $(".ballview").append($(this).attr("data-cursor"));
                 gsap.to('.inner-ball', { duration: 0.3, yPercent: -50, width: 95, height: 95, opacity: 1, borderWidth: 0, backgroundColor: "#FFF" });
                 gsap.to(".ballview", { duration: 0.3, scale: 1, autoAlpha: 1 });
             }).on("mouseleave", function() {
+                if ($('.projects-single').length) {
+                   $('.circle-cursor').removeClass('circle-cursor--link');
+                }
                 $('.circle-cursor').css({'mix-blend-mode': 'difference'});
                 gsap.to('.inner-ball', { duration: 0.3, yPercent: -50, backgroundColor: "transparent" });
                 gsap.to(".ballview", { duration: 0.3, scale: 0, autoAlpha: 0, clearProps:"all" });
@@ -67,6 +73,14 @@
               }
             });
           }
+        }
+
+        // project clickable link
+        if ($('.projects-single').length) {
+          $('.projects-single').on('click', function () {
+            let address = $(this).find('h6').text().toLowerCase() +'.com';
+            window.open(address, '_blank');
+          });
         }
     });
 }(jQuery));

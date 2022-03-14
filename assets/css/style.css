@@ -139,10 +139,6 @@ div#projects {
   height: 100%;
 }
 
-.projects-single a {
-  display: block;
-}
-
 @media (max-width: 1024px) {
   .projects-wrapper {
     left: 0;
