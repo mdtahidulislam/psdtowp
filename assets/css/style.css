@@ -1,3 +1,7 @@
+:root {
+  --singleWidth: 450px;
+  --mrginRight: 30px;
+}
 /* Cusrsor */
 body,
 html {
@@ -117,8 +121,8 @@ html {
 }
 
 .projects-single {
-  margin-right: 30px;
-  width: 450px;
+  margin-right: var(--mrginRight);
+  width: var(--singleWidth);
 }
 
 .projects-single:last-child {

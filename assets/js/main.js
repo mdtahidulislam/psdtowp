@@ -60,16 +60,24 @@
         // projects horizontal scroll
         if ($(window).width() > 1024){
           if ($('.projects-single').length) {
+            // let slideWidth = $('.projects-single').length * 38  + '%';
+            let slideNum = $('.projects-single').length;
+            let slideWidth = parseInt(getComputedStyle(document.body).getPropertyValue("--singleWidth"));
+            let slideMargin = parseInt(getComputedStyle(document.body).getPropertyValue("--mrginRight"));
+            let slideWrapperWidth = (slideNum * slideWidth) + ( (slideNum - 1) * slideMargin );
+            // let scrollEnd = $(window).height() / 2;
+            // let slideLength = (slideWrapperWidth / scrollEnd ) * 100;
+            $('.projects-wrapper').css({'width': slideWrapperWidth  + 'px'});
             let sections = document.querySelectorAll('.projects-wrapper');
             gsap.to(sections, {
-              xPercent: -64,
+              xPercent: -82.5,
               ease: "none",
               scrollTrigger: {
                 trigger: "#projects",
                 pin: true,
                 scrub: 0.3,
-                start: "center center",
-                end: '+=100%',
+                start: "top 200px",
+                end: '+=3000'
               }
             });
           }
@@ -78,7 +86,7 @@
         // project clickable link
         if ($('.projects-single').length) {
           $('.projects-single').on('click', function () {
-            let address = $(this).find('h6').text().toLowerCase() +'.com';
+            let address = $(this).attr('data-ref');
             window.open(address, '_blank');
           });
         }
