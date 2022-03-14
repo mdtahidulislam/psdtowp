@@ -105,7 +105,7 @@ html {
   transition: all 0.25s;
 }
 
-/* projects */
+/* projects page */
 .projects-wrapper {
   display: flex;
   flex-wrap: nowrap;
@@ -123,6 +123,10 @@ html {
 
 .projects-single:last-child {
   margin-right: 0;
+}
+
+.project-subtitle {
+  font-size: 16px;
 }
 
 div#projects {
