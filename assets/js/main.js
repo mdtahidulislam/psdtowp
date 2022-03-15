@@ -81,8 +81,7 @@
                 pin: true,
                 scrub: 0.3,
                 start: "top 200px",
-                end: () => `+=${document.querySelector('.projects-wrapper').offsetWidth}`,
-                markers: true
+                end: () => `+=${document.querySelector('.projects-wrapper').offsetWidth}`
               }
             });
           }
