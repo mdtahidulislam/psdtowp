@@ -19,12 +19,18 @@
         // cursor view project on hover
         if ($("[data-cursor]").length) {
             $("[data-cursor]").on("mouseenter", function() {
+                if ($('.projects-single').length) {
+                   $('.circle-cursor').addClass('circle-cursor--link');
+                }
                 $('.circle-cursor').css({'mix-blend-mode': 'normal'});
                 $('.inner-ball').css({'visibility': 'visible'}).append('<div class="ballview"></div>');
                 $(".ballview").append($(this).attr("data-cursor"));
                 gsap.to('.inner-ball', { duration: 0.3, yPercent: -50, width: 95, height: 95, opacity: 1, borderWidth: 0, backgroundColor: "#FFF" });
                 gsap.to(".ballview", { duration: 0.3, scale: 1, autoAlpha: 1 });
             }).on("mouseleave", function() {
+                if ($('.projects-single').length) {
+                   $('.circle-cursor').removeClass('circle-cursor--link');
+                }
                 $('.circle-cursor').css({'mix-blend-mode': 'difference'});
                 gsap.to('.inner-ball', { duration: 0.3, yPercent: -50, backgroundColor: "transparent" });
                 gsap.to(".ballview", { duration: 0.3, scale: 0, autoAlpha: 0, clearProps:"all" });
@@ -47,6 +53,46 @@
               });
             }
           }
+        }
+
+        
+        gsap.registerPlugin(ScrollTrigger);
+        // projects horizontal scroll
+        if ($(window).width() > 1024){
+          if ($('.projects-single').length) {
+            // let slideWidth = $('.projects-single').length * 38  + '%';
+            let slideNum = $('.projects-single').length;
+            let slideWidth = parseInt(getComputedStyle(document.body).getPropertyValue("--singleWidth"));
+            let slideMargin = parseInt(getComputedStyle(document.body).getPropertyValue("--mrginRight"));
+            let slideWrapperWidth = (slideNum * slideWidth) + ( (slideNum - 1) * slideMargin );
+            // let scrollEnd = $(window).height() / 2;
+            // let slideLength = (slideWrapperWidth / scrollEnd ) * 100;
+            $('.projects-wrapper').css({'width': slideWrapperWidth  + 'px'});
+
+            
+
+            let sections = document.querySelectorAll('.projects-wrapper');
+            
+            gsap.to(sections, {
+              xPercent: -82.5,
+              ease: "none",
+              scrollTrigger: {
+                trigger: "#projects",
+                pin: true,
+                scrub: 0.3,
+                start: "top 200px",
+                end: () => `+=${document.querySelector('.projects-wrapper').offsetWidth}`
+              }
+            });
+          }
+        }
+
+        // project clickable link
+        if ($('.projects-single').length) {
+          $('.projects-single').on('click', function () {
+            let address = $(this).attr('data-ref');
+            window.open(address, '_blank');
+          });
         }
     });
 }(jQuery));
