@@ -68,7 +68,11 @@
             // let scrollEnd = $(window).height() / 2;
             // let slideLength = (slideWrapperWidth / scrollEnd ) * 100;
             $('.projects-wrapper').css({'width': slideWrapperWidth  + 'px'});
+
+            
+
             let sections = document.querySelectorAll('.projects-wrapper');
+            
             gsap.to(sections, {
               xPercent: -82.5,
               ease: "none",
@@ -77,7 +81,8 @@
                 pin: true,
                 scrub: 0.3,
                 start: "top 200px",
-                end: '+=3000'
+                end: () => `+=${document.querySelector('.projects-wrapper').offsetWidth}`,
+                markers: true
               }
             });
           }
