@@ -2020,7 +2020,24 @@ a.ph-category:hover {
 .ph-caption > p:last-child {
 	margin-bottom: 0;
 }
-
+.ph-image.bimg {
+    position: absolute !important;
+    width: 70% !important;
+    right: 0;
+    /* left: 0; */
+    top: 0;
+    bottom: 0;
+    max-height: 100vh;
+    opacity: .2;
+}
+.main_logo {
+    width: 102px;
+    max-height: unset;
+    height: auto;
+}
+.ph-image.bimg img {
+    object-fit: contain !important;
+}
 
 /* Project info list
 ===================== */
