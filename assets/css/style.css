@@ -53,6 +53,18 @@ html {
   background: transparent;
 }
 
+/* index page */
+.tt-heading-title.ph-caption-title {
+  font-size: 36px;
+  margin-top: 70px;
+}
+
+@media (max-width: 991px) {
+  .block-img {
+    margin-top: 72px;
+  }
+}
+
 /* testimonial slider */
 @media (min-width: 1025px) {
   .tt-testimonials-slider .swiper-slide {
