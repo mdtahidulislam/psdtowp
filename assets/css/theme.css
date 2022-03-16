@@ -696,9 +696,15 @@ body.is-firefox .tt-heading.tt-heading-stroke .tt-heading-title {
 
 /* size lg */
 .tt-heading.tt-heading-lg .tt-heading-title {
-  font-size: calc(28px + 2vw);
+  font-size: 60px !important;
   line-height: 1.3;
 }
+img.cimg {
+  max-width: 500px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+
 .tt-heading.tt-heading-lg .tt-heading-subtitle {
   font-size: calc(16px + 0.3vw);
   font-weight: bold;
@@ -2101,7 +2107,7 @@ a.ph-category:hover {
   margin-top: 15px;
 }
 #page-header.ph-cap-sm .ph-caption-title {
-  font-size: 75px;
+  font-size: 75px !important;
 }
 .ph-subt-parallax {
   font-family: "Poppins", sans-serif;
@@ -2135,8 +2141,8 @@ a.ph-category:hover {
 }
 
 .btn-block > a:first-child {
-  background: #cc2112;
-  border-color: #cc2112;
+  background: #2E67EE;
+  border-color: #2E67EE;
 }
 .ph-caption .ph-caption-title + p,
 .ph-caption .ph-caption-title-ghost + p,
@@ -2146,7 +2152,9 @@ a.ph-category:hover {
 .ph-caption > p:last-child {
   margin-bottom: 0;
 }
-
+.pgi-image img{
+  object-fit: contain !important;
+}
 .ph-image.bimg {
     position: absolute !important;
     width: 70% !important;
@@ -9361,11 +9369,50 @@ body:not(.tt-boxed) .tt-footer-inner,
   }
 }
 .tt-accordion.tt-ac-xlg .tt-ac-head-title {
-  font-size: 20px;
+  font-size: 25px;
   letter-spacing: 3px;
   font-weight: 300;
 }
+.has-dropcap:first-letter {
+  font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
+  float: left;
+  font-size: 2rem;
+  line-height: 0.5;
+  margin: 0.1em 0.1em 0.2em 0;
+}
 
+.dropcap {
+  font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
+  background: #303030;
+  color: #FDF9F2;
+  float: left;
+  font-size: 6rem;
+  line-height: 1;
+  margin: 0.1em 0.1em 0.2em 0;
+  padding: 0.1em;
+}
+.dropcap:before,
+.dropcap:after {
+  content: "";
+  display: block;
+}
+.dropcap:before {
+  margin-top: -0.2em;
+}
+.dropcap:after {
+  margin-bottom: -0.15em;
+}
+
+/* https://www.scottohara.me/blog/2017/04/14/inclusively-hidden.html */
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0); 
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap; 
+  width: 1px;
+}
 .tt-accordion.tt-ac-xlg .tt-accordion-heading {
   padding: 20px 0px;
 }
