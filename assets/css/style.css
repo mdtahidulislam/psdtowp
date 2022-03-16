@@ -59,6 +59,10 @@ html {
   margin-top: 70px;
 }
 
+.block-img img {
+  object-fit: cover;
+}
+
 @media (max-width: 991px) {
   .block-img {
     margin-top: 72px;
