@@ -22,6 +22,9 @@
                 if ($('.projects-single').length) {
                    $('.circle-cursor').addClass('circle-cursor--link');
                 }
+                if ($('.cursor-close')) {
+                  $('.circle-cursor').addClass('circle-cursor--link');
+                }
                 $('.circle-cursor').css({'mix-blend-mode': 'normal'});
                 $('.inner-ball').css({'visibility': 'visible'}).append('<div class="ballview"></div>');
                 $(".ballview").append($(this).attr("data-cursor"));
@@ -31,11 +34,22 @@
                 if ($('.projects-single').length) {
                    $('.circle-cursor').removeClass('circle-cursor--link');
                 }
+                if ($('.cursor-close')) {
+                  $('.circle-cursor').removeClass('circle-cursor--link');
+                }
                 $('.circle-cursor').css({'mix-blend-mode': 'difference'});
                 gsap.to('.inner-ball', { duration: 0.3, yPercent: -50, backgroundColor: "transparent" });
                 gsap.to(".ballview", { duration: 0.3, scale: 0, autoAlpha: 0, clearProps:"all" });
                 $('.inner-ball').css({'visibility': 'hidden'}).find(".ballview").remove();
             });
+
+            // for bloglist sidebar
+            if ($('.cursor-close')) {
+              $(this).on('click', function() {
+                $('.circle-cursor').removeClass('circle-cursor--link');
+                $('.inner-ball').css({'visibility': 'hidden'}).find(".ballview").remove();
+              })
+            }
         }
 
         // cursor drag on hover for swiper slider
