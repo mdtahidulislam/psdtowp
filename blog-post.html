@@ -10,7 +10,7 @@
 	<head>
 
 		<!-- Title -->
-		<title>Blog List | Tank - Creative Portfolio Showcase HTML Website Template by Themetorium</title>
+		<title>Blog Post | Tank - Creative Portfolio Showcase HTML Website Template by Themetorium</title>
 
 		<!-- Meta -->
 		<meta charset="utf-8">
@@ -84,7 +84,7 @@
 
 			<!-- Begin noise background -->
 			<div class="bg-noise"></div>
-			<!-- End noise background --> 
+			<!-- End noise background -->
 
 
 			<!-- *****************************************
@@ -285,7 +285,7 @@
 
 															<!-- Begin submenu
 															=================== -->
-															<li class="tt-ol-submenu-wrap active">
+															<li class="tt-ol-submenu-wrap">
 																<div class="tt-ol-submenu-trigger">
 																	<a href="#" class="tt-ol-submenu-link">Blog List</a>
 																	<div class="tt-ol-submenu-caret-wrap">
@@ -296,7 +296,7 @@
 																	<ul class="tt-ol-submenu-list">
 
 																		<li><a href="blog-interactive.html">Interactive List</a></li>
-																		<li class="active"><a href="blog-list.html">Compact List</a></li>
+																		<li><a href="blog-list.html">Compact List</a></li>
 																		<li><a href="blog-classic.html">Classic List</a></li>
 																		<li><a href="blog-classic-sidebar.html">Classic Sidebar</a></li>
 																		
@@ -307,7 +307,7 @@
 
 															<!-- Begin submenu
 															=================== -->
-															<li class="tt-ol-submenu-wrap">
+															<li class="tt-ol-submenu-wrap active">
 																<div class="tt-ol-submenu-trigger">
 																	<a href="#" class="tt-ol-submenu-link">Blog Post</a>
 																	<div class="tt-ol-submenu-caret-wrap">
@@ -317,7 +317,7 @@
 																<div class="tt-ol-submenu">
 																	<ul class="tt-ol-submenu-list">
 
-																		<li><a href="blog-post.html">Single Post</a></li>
+																		<li class="active"><a href="blog-post.html">Single Post</a></li>
 																		<li><a href="blog-post-classic-sidebar.html">Classic Sidebar</a></li>
 																		
 																	</ul> <!-- /.tt-ol-submenu-list -->
@@ -361,6 +361,9 @@
 					<!-- ========================
 					///// Begin page header /////
 					============================= 
+					* ATENTION: This page header is slightly different from the default page header! 
+					It contains some extra elements and classec specifically for a blog post.
+					============================= 
 					* Use class "ph-full" to enable fullscreen size.
 					* Use class "ph-cap-sm", "ph-cap-lg", "ph-cap-xlg" or "ph-cap-xxlg" to set caption size (no class = default size).
 					* Use class "ph-center" to enable content center position.
@@ -372,16 +375,16 @@
 					* Use class "ph-content-parallax" to enable content parallax.
 					* Use class "ph-stroke" to enable caption title stroke style.
 					-->
-					<div id="page-header" class="ph-cap-lg ph-center ph-image-cropped ph-image-cover-4 ph-content-parallax">
-						<div class="page-header-inner tt-wrap">
+					<div id="page-header" class="ph-full ph-cap-sm ph-center ph-bg-image ph-image-shadow ph-image-cover-6 ph-content-parallax">
+						<div class="page-header-inner tt-wrap max-width-1400">
 
 							<!-- Begin page header image 
 							============================= -->
-							<!-- <div class="ph-image">
+							<div class="ph-image">
 								<div class="ph-image-inner">
-									<img src="assets/img/page-header/ph-2.jpg" alt="Image">
+									<img src="assets/img/page-header/blog-ph/blog-ph-1.jpg" alt="Image">
 								</div>
-							</div> -->
+							</div>
 							<!-- End page header image -->
 
 							<!-- Begin page header caption
@@ -389,9 +392,17 @@
 							Use class "max-width-*" to set caption max width if needed. For example "max-width-1000". More info about helper classes can be found in the file "helper.css".
 							-->
 							<div class="ph-caption">
-								<h1 class="ph-caption-title ph-appear">Blog</h1>
-								<div class="ph-caption-title-ghost ph-appear">Blog</div>
-								<div class="ph-caption-subtitle ph-appear">Articles &amp; News</div>
+								<div class="ph-categories ph-appear">
+									<a href="blog-archive.html" class="ph-category">Lifestyle</a>
+									<!-- <a href="blog-archive.html" class="ph-category">Uncategorized</a> -->
+								</div> <!-- /.ph-categories -->
+
+								<h2 class="ph-caption-title ph-appear">Want to Step Up Your Skills? You Need to Read This First</h2> <!-- You can use <br class="hide-from-lg"> to break a text line if needed -->
+
+								<div class="ph-meta ph-appear">
+									<span class="ph-meta-published">May 26, 2021</span>
+									<span class="ph-meta-posted-by">by: <a href="blog-archive.html" title="View all posts by John Doe">John Doe</a></span>
+								</div> <!-- /.ph-meta -->
 							</div> 
 							<!-- End page header caption -->
 
@@ -423,6 +434,38 @@
 							</div>
 						</div>
 						<!-- End made with love -->
+
+						<!-- Begin page header share (share buttons are for design purposes only!) 
+						============================= -->
+						<div class="ph-share">
+							<div class="ph-share-trigger ph-appear">
+								<div class="ph-share-text">Share</div>
+								<div class="ph-share-icon magnetic-item"><i class="fas fa-share-alt"></i></div>
+							</div> <!-- /.ph-share-trigger -->
+
+							<div class="ph-share-content">
+								<div class="ph-share-close cursor-close"><div class="bg-noise"></div></div>
+								<div class="ph-share-inner">
+									<h1 class="ph-share-title ph-share-appear">Spread the Word!</h1>
+									<div class="ph-share-subtitle ph-share-appear">Share this article with your friends</div>
+
+									<div class="social-buttons ph-share-appear">
+										<ul>
+											<li><a href="#0" class="magnetic-item" title="Share on Facebook"><i class="fab fa-facebook-f"></i></a></li>
+											<li><a href="#0" class="magnetic-item" title="Share on Twitter"><i class="fab fa-twitter"></i></a></li>
+											<li><a href="#0" class="magnetic-item" title="Share on Pinterest"><i class="fab fa-pinterest"></i></a></li>
+										</ul>
+									</div> <!-- /.social-buttons -->
+
+									<!-- This close is for mobile devices -->
+									<div class="ph-share-m-close ph-share-appear">Close <i class="fas fa-times"></i></div>
+
+								</div> <!-- /.ph-share-inner -->
+
+								<div class="ph-share-ghost ph-share-appear">Share</div>
+							</div> <!-- /.ph-share-content -->
+						</div>
+						<!-- End page header share -->
 						
 					</div>
 					<!-- End page header -->
@@ -440,359 +483,277 @@
 						* You can use padding classes if needed. For example "padding-top-xlg-150", "padding-bottom-xlg-150", "no-padding-top", "no-padding-bottom", etc. Note that each situation may be different and each section may need different classes according to your needs. More info about helper classes can be found in the file "helper.css".
 						-->
 						<div class="tt-section">
-							<div class="tt-section-inner tt-wrap">
-								
-								<!-- Begin blog list
-								===================== 
-								* Use class "bli-image-cropped" to grop blog list item images (set fixed height).
-								* Use class "bli-compact" to enable compact blog list style. Note: If "tt-sidebar" is used, then add more width to "tt-section-inner", for example "max-width-1600".
-								-->
-								<div id="blog-list" class="bli-image-cropped bli-compact">
+							<div class="tt-section-inner tt-wrap max-width-900">
 
-									<!-- Begin blog list item 
-									========================== -->
-									<article class="blog-list-item">
-								
-										<!-- Begin blog list item image -->
-										<a href="blog-post.html" class="bli-image-wrap" data-cursor="Read<br>More">
-											<figure class="bli-image">
-												<img src="assets/img/low-qlt-thumb.jpg" data-src="assets/img/blog/list/blog-list-1.jpg" class="tt-lazy anim-zoomin" alt="Image">
-											</figure>
-										</a>
-										<!-- End blog list item image -->
+								<!-- Begin blog post 
+								===================== -->
+								<article class="tt-blog-post lightgallery">
+
+									<!-- Begin blog post content -->
+									<div class="tt-blog-post-content">
+
+										<h3>Heading</h3>
+
+										<p>Tank is a creative portfolio showcase HTML website template. Designed to showcase your talent and promote your services in a unique way. Attachment apartments in delightful by motionless it no. And now she burst sir learn total. Hearing hearted shewing own ask. Solicitude uncommonly use her business not collecting age. The properly agencies required mistaken outlived bed and. Remainder admitting neglected is he belonging.</p>
+
+										<p>Maids creative how learn drift but freelancers stand yet set. Smooth GSAP (TweenMax) animations. Piqued our sister shy nature almost his wicket. Hand dear so we hour to. He we be hastily influencers effects he service. Sympathize it <a href="https://1.envato.market/tank" target="_blank" rel="noopener">senectus nec ipsum</a> celebrated my pianoforte indulgence. Tank is extremely flexible showcase template. Elegance exercise as laughing proposal mistaken if. We up modern an it photography portfolio invitation.</p>
+
+										<!-- Begin post image -->
+										<figure class="tt-blog-post-image">
+											<a href="assets/img/blog/single/blog-post-1.jpg" class="tt-bpi-link lg-trigger" data-exthumbnail="assets/img/blog/single/thumb/img-4.jpg" data-cursor="View">
+												<img class="tt-lazy" src="assets/img/low-qlt-thumb.jpg" data-src="assets/img/blog/single/blog-post-1.jpg" alt="image">
+											</a>
+											<figcaption class="tt-bpi-caption">
+												Photo by <a href="http://unsplash.com/" target="_blank" rel="noopener">Unsplash</a>
+											</figcaption>
+										</figure>
+										<!-- End post image -->
+
+										<p>Is at purse tried website china ready decay parallax. Small its shy way had woody downs power. To denoting admitted speaking learning my exercise so in. Procured shutters its feelings. To or three offer well commented am at. As dissuade cheerfully overcame so of friendly he indulged unpacked. Alteration connection to so as collecting me. Difficult in delivered extensive at direction allowance. Alteration put use diminution can be considered.</p>
+
+										<blockquote class="open-quote">
+											"Your time is limited, so don't waste it living someone else's life. Don't be trapped by dogma – which is living with the results of other people's thinking."
+											<footer>Steve Jobs</footer>
+										</blockquote>
+
+										<p>Folly was these three and songs arose whose. Of in vicinity contempt together in possible branched. Assured company hastily looking garrets in oh. Most have love my gone to this so. Discovered interested prosperous the our affronting insipidity day. Missed lovers way one vanity wishes nay but. Use shy seemed within twenty wished old few regrets passed. Absolute one hastened mrs any sensible.</p>
+
+										<br>
+
+										<h3>Embed video</h3>
+
+										<p>Now indulgence dissimilar for his thoroughly has responsive. Agreement offending commanded my an. Change wholly say why eldest period. Are projection put celebrated particular unreserved joy unsatiable its? In then dare good am rose bred or. On am in nearer square wanted.</p>
+
+										<!-- Begin tt-Embed (YouTube video) -->
+										<div class="tt-embed hide-cursor">
+											<iframe class="tt-embed-item" data-src="https://www.youtube.com/embed/cJ_bnfIJpKM" allowfullscreen=""></iframe>
+										</div>
+										<!-- End tt-Embed -->
+
+										<!-- Begin tt-Embed (Vimeo video) -->
+										<!-- <div class="tt-embed hide-cursor">
+											<iframe class="tt-embed-item" data-src="https://player.vimeo.com/video/78194687" allowfullscreen=""></iframe>
+										</div> -->
+										<!-- End tt-Embed -->
+
+									</div>
+									<!-- End blog post content -->
+
+									<!-- Begin blog post tags -->
+									<div class="tt-blog-post-tags">
+										<ul>
+											<li><span>Tags:</span></li>
+											<li><a href="blog-archive.html">#photography</a></li> 
+											<li><a href="blog-archive.html">#travel</a></li>
+											<li><a href="blog-archive.html">#motion</a></li>
+										</ul>
+									</div>
+									<!-- End blog post tags -->
+
+									<!-- Begin blog post share (Note: for design purposes only!) 
+									=========================== 
+									* Use class "bss-fixed-bottom" to enable post share fixed bottom position (effect only on small screens!!!).
+									-->
+									<div class="tt-blog-post-share">
+										<div class="tt-bps-text">Share:</div>
+										<div class="social-buttons">
+											<ul>
+												<li><a href="#0" class="magnetic-item" rel="noopener" title="Share on Facebook"><i class="fab fa-facebook-f"></i></a></li>
+												<li><a href="#0" class="magnetic-item" rel="noopener" title="Share on Twitter"><i class="fab fa-twitter"></i></a></li>
+												<li><a href="#0" class="magnetic-item" rel="noopener" title="Share on Pinterest"><i class="fab fa-pinterest"></i></a></li>
+											</ul>
+										</div> <!-- /.social-buttons -->
+									</div>
+									<!-- End blog post share -->
+
+								</article> 
+								<!-- End blog post -->
+
+
+								<!-- Begin blog post nav 
+								======================== -->
+								<div class="tt-blog-post-nav">
+									<div class="tt-bp-nav-col tt-bp-nav-left">
+										<div class="tt-bp-nav-text"><span><i class="fas fa-angle-left"></i></span>Prew Post</div>
+										<h4 class="tt-bp-nav-title"><a href="">Secrets to Getting Your Project to Complete Quickly and Efficiently</a></h4>
+									</div>
+									<div class="tt-bp-nav-col tt-bp-nav-right">
+										<div class="tt-bp-nav-text">Next Post<span><i class="fas fa-angle-right"></i></span></div>
+										<h4 class="tt-bp-nav-title"><a href="">Why Some People Almost Always Save Money With This Method</a></h4>
+									</div>
+								</div>
+								<!-- End blog post nav -->
+
+
+								<!-- Begin post comments 
+								========================= -->
+								<div id="tt-blog-post-comments">
+
+									<h4 class="tt-bpc-heading">5 comments:</h4>
+									
+									<!-- Begin tt-Comments list 
+									============================ -->
+									<ul class="tt-comments-list">
+
+										<!-- Begin tt-comment -->
+										<li class="tt-comment">
+											<a href="#" class="tt-comment-avatar">
+												<img src="assets/img/low-qlt-thumb.jpg" data-src="assets/img/blog/avatar.jpg" class="tt-lazy" alt="image">
+											</a>
+											<div class="tt-comment-body">
+												<div class="tt-comment-meta">
+													<h4 class="tt-comment-heading"><a href="#">David Bradley</a></h4>
+													<span class="tt-comment-time">May 26, 2021 at 10:24am</span>
+												</div>
+												<span class="tt-comment-reply"><a href="#">Reply</a></span>
+												<div class="tt-comment-text">
+													<p>Tolerably earnestly middleton extremely distrusts she boy now not. Add and offered prepare how cordial two promise. Greatly who affixed suppose but enquire compact prepare all put. Added forth chief trees but rooms think may. Wicket do manner others seemed enable rather in. Excellent own discovery unfeeling.</p>
+												</div> <!-- /.tt-comment-text -->
+											</div> <!-- /.tt-comment-body -->
+										</li>
+										<!-- End tt-comment -->
+
+										<!-- Begin tt-comment -->
+										<li class="tt-comment">
+											<a href="#" class="tt-comment-avatar">
+												<img src="assets/img/low-qlt-thumb.jpg" data-src="assets/img/blog/avatar.jpg" class="tt-lazy" alt="image">
+											</a>
+											<div class="tt-comment-body">
+												<div class="tt-comment-meta">
+													<h4 class="tt-comment-heading"><a href="#">Katie Ryan</a></h4>
+													<span class="tt-comment-time">May 26, 2021 at 10:24am</span>
+												</div>
+												<span class="tt-comment-reply"><a href="#">Reply</a></span>
+												<div class="tt-comment-text">
+													<p>Unfeeling so rapturous discovery he exquisite. Reasonably so middletons or impression by terminated. Old pleasure required removing elegance him had. Down she bore sing saw calm high. Of an or game gate west face shed. ﻿no great but music too old found arose.</p>
+												</div> <!-- /.tt-comment-text -->
+
+												<!-- Begin tt comments list 
+												============================ -->
+												<ul class="tt-comments-list">
+
+													<!-- Begin tt-comment -->
+													<li class="tt-comment">
+														<a href="#" class="tt-comment-avatar">
+															<img src="assets/img/low-qlt-thumb.jpg" data-src="assets/img/blog/avatar.jpg" class="tt-lazy" alt="image">
+														</a>
+														<div class="tt-comment-body">
+															<div class="tt-comment-meta">
+																<h4 class="tt-comment-heading"><a href="#">John Doe</a></h4>
+																<span class="tt-comment-time">May 26, 2021 at 10:24am</span>
+															</div>
+															<span class="tt-comment-reply"><a href="#">Reply</a></span>
+															<div class="tt-comment-text">
+																<p>Still court no small think death so an wrote. Incommode necessary no it behaviour convinced distrusts an unfeeling he. Could death since do we hoped is in. Exquisite no my attention extensive. The determine conveying moonlight age. Avoid for see marry sorry child.</p>
+															</div> <!-- /.tt-comment-text -->
+														</div> <!-- /.tt-comment-body -->
+													</li>
+													<!-- End tt-comment -->
+
+													<!-- Begin tt-comment -->
+													<li class="tt-comment">
+														<a href="#" class="tt-comment-avatar">
+															<img src="assets/img/low-qlt-thumb.jpg" data-src="assets/img/blog/avatar.jpg" class="tt-lazy" alt="image">
+														</a>
+														<div class="tt-comment-body">
+															<div class="tt-comment-meta">
+																<h4 class="tt-comment-heading"><a href="#">Katie Ryan</a></h4>
+																<span class="tt-comment-time">May 26, 2021 at 10:24am</span>
+															</div>
+															<span class="tt-comment-reply"><a href="#">Reply</a></span>
+															<div class="tt-comment-text">
+																<p>For norland produce age wishing. To figure on it spring season up. Her provision acuteness had excellent two why intention.</p>
+															</div> <!-- /.tt-comment-text -->
+														</div> <!-- /.tt-comment-body -->
+													</li>
+													<!-- End tt-comment -->
+
+												</ul>
+												<!-- End tt comments list -->
+
+											</div> <!-- /.tt-comment-body -->
+										</li>
+										<!-- End tt-comment -->
+
+										<!-- Begin tt-comment -->
+										<li class="tt-comment">
+											<a href="#" class="tt-comment-avatar">
+												<img src="assets/img/low-qlt-thumb.jpg" data-src="assets/img/blog/avatar.jpg" class="tt-lazy" alt="image">
+											</a>
+											<div class="tt-comment-body">
+												<div class="tt-comment-meta">
+													<h4 class="tt-comment-heading"><a href="#">Kate Dixon</a></h4>
+													<span class="tt-comment-time">May 26, 2021 at 10:24am</span>
+												</div>
+												<span class="tt-comment-reply"><a href="#">Reply</a></span>
+												<div class="tt-comment-text">
+													<p>Allow miles wound place the leave had. To sitting subject no improve studied limited. Ye indulgence unreserved connection alteration appearance my an astonished. Up as seen sent make he they of.</p>
+												</div> <!-- /.tt-comment-text -->
+											</div> <!-- /.tt-comment-body -->
+										</li>
+										<!-- End tt-comment -->
+
+									</ul>
+									<!-- End tt-Comments list -->
+
+									<!-- Begin post comment form (Note: post comment form is for design purposes only!) 
+									============================= 
+									* Use class "tt-form-filled" or "tt-form-minimal" to change form style.
+									* Use class "tt-form-sm" or "tt-form-lg" to change form size (no class = default size).
+									* Use class "tt-hide-labels" to to hide labels.
+									-->
+									<form id="tt-post-comment-form" class="tt-form-lg tt-form-minimal">
+										<h4 class="tt-post-comment-form-heading">Leave a Comment:</h4>
+										<div class="tt-row">
+											<div class="tt-col-lg-6">
+
+												<div class="tt-form-group">
+													<label>Name <span class="text-gray">*</span></label>
+													<input class="tt-form-control" id="84990245" type="text" placeholder="Enter your name">
+												</div>
+
+											</div> <!-- /.col -->
+
+											<div class="tt-col-lg-6">
+
+												<div class="tt-form-group">
+													<label>Email address <span class="small text-gray">(Optional)</span></label>
+													<input class="tt-form-control" id="19833520" type="email" placeholder="Enter your email">
+												</div>
+
+											</div> <!-- /.col -->
+										</div> <!-- /.row -->
 										
-										<!-- Begin blog list item info -->
-										<div class="bli-info">
-											<div class="bli-categories">
-												<a href="blog-archive.html">Lifestyle</a>
-												<!-- <a href="blog-archive.html">Uncategorized</a> -->
+										<div class="tt-form-group">
+											<label>Comment <span class="text-gray">*</span></label>
+											<textarea class="tt-form-control" id="30945381" rows="8" placeholder="Enter your comment"></textarea>
+											<small class="tt-form-text">Fields marked with an asterisk (*) are required!</small>
+										</div>
+									
+										<!-- Begin post comment submit button -->
+										<div class="tt-btn tt-btn-light-outline">
+											<button type="submit" data-hover="Post Comment">Post Comment</button>
+										</div>
+										<!-- End post comment submit button -->
+
+										<!-- Begin post comment reminder -->
+										<div class="tt-post-comment-reminder">
+											<div class="tt-form-check tt-form-check-inline">
+												<input type="checkbox" id="notify-me-new-comment">
+												<label for="notify-me-new-comment">Email me when this comment receives a reply.</label>
 											</div>
-											<h2 class="bli-title"><a href="blog-post.html">Vue Native Vs React Native: Everything You Need To Know!</a></h2>
-											<div class="bli-meta"> 
-												<span class="published">May 26, 2021</span>
-												<span class="posted-by">- by <a href="blog-archive.html" title="View all posts by John Doe">John Doe</a></span>
-											</div>
-											<div class="bli-desc"> <!-- 3 lines is optimal! -->
-												So, you just got hired to build a mobile application for a big company? But there is one problem, you are not sure which
-												JavaScript framework to use between Vue Native vs React Native. Well, this is quite normal since both tools are equally
-												good hence their popularity in the web application industry. But which...
-											</div>
-											<div class="bli-read-more tt-btn tt-btn-link">
-												<a href="blog-post.html" data-hover="Read More">Read More</a>
+											<div class="tt-form-check">
+												<input type="checkbox" id="notify-me-new-post">
+												<label for="notify-me-new-post">Notify me of new posts by email.</label>
 											</div>
 										</div>
-										<!-- End blog list item info -->
+										<!-- End post comment reminder -->
 
-									</article>
-									<!-- End blog list item -->
-
-
-									<!-- Begin blog list item 
-									========================== -->
-									<article class="blog-list-item">
-								
-										<!-- Begin blog list item image -->
-										<a href="blog-post.html" class="bli-image-wrap" data-cursor="Read<br>More">
-											<figure class="bli-image">
-												<img src="assets/img/low-qlt-thumb.jpg" data-src="assets/img/blog/list/blog-list-2.jpg" class="tt-lazy anim-zoomin" alt="Image">
-											</figure>
-										</a>
-										<!-- End blog list item image -->
-										
-										<!-- Begin blog list item info -->
-										<div class="bli-info">
-											<div class="bli-categories">
-												<a href="blog-archive.html">Tutorials</a>
-												<!-- <a href="blog-archive.html">Uncategorized</a> -->
-											</div>
-											<h2 class="bli-title"><a href="blog-post.html">13 Web Design Best Practices In 2022</a></h2>
-											<div class="bli-meta"> 
-												<span class="published">May 24, 2021</span>
-												<span class="posted-by">- by <a href="blog-archive.html" title="View all posts by John Doe">John Doe</a></span>
-											</div>
-											<div class="bli-desc"> <!-- 3 lines is optimal! -->
-												It no longer makes sense for you to have a full-time web developer on your payroll in today’s interconnected world. Why
-												would you do that when you can get the best web developers through dedicated online platforms? Even though many
-												companies, big and small, understand the benefits of working with freelancers, they might not know...
-											</div>
-											<div class="bli-read-more tt-btn tt-btn-link">
-												<a href="blog-post.html" data-hover="Read More">Read More</a>
-											</div>
-										</div>
-										<!-- End blog list item info -->
-
-									</article>
-									<!-- End blog list item -->
-
-
-									<!-- Begin blog list item 
-									========================== -->
-									<article class="blog-list-item">
-								
-										<!-- Begin blog list item image -->
-										<a href="blog-post.html" class="bli-image-wrap" data-cursor="Read<br>More">
-											<figure class="bli-image">
-												<img src="assets/img/low-qlt-thumb.jpg" data-src="assets/img/blog/list/blog-list-2.jpg" class="tt-lazy anim-zoomin" alt="Image">
-											</figure>
-										</a>
-										<!-- End blog list item image -->
-										
-										<!-- Begin blog list item info -->
-										<div class="bli-info">
-											<div class="bli-categories">
-												<a href="blog-archive.html">Tutorials</a>
-												<!-- <a href="blog-archive.html">Uncategorized</a> -->
-											</div>
-											<h2 class="bli-title"><a href="blog-post.html">How to Make an Interactive Website?</a></h2>
-											<div class="bli-meta"> 
-												<span class="published">May 24, 2021</span>
-												<span class="posted-by">- by <a href="blog-archive.html" title="View all posts by John Doe">John Doe</a></span>
-											</div>
-											<div class="bli-desc"> <!-- 3 lines is optimal! -->
-												In a world where we are experiencing things like Virtual Reality and Metaverse, you can easily guess the importance of
-												interactivity. The digital platforms including the websites are prioritizing interactive experiences like never before.
-												Talking about interactive websites, it’s something that automates the visitors’ experience into a more immersive one.
-												The more it’s immersive, the...
-											</div>
-											<div class="bli-read-more tt-btn tt-btn-link">
-												<a href="blog-post.html" data-hover="Read More">Read More</a>
-											</div>
-										</div>
-										<!-- End blog list item info -->
-
-									</article>
-									<!-- End blog list item -->
-
-
-									<!-- Begin blog list item 
-									========================== -->
-									<article class="blog-list-item">
-								
-										<!-- Begin blog list item image -->
-										<a href="blog-post.html" class="bli-image-wrap" data-cursor="Read<br>More">
-											<figure class="bli-image">
-												<img src="assets/img/low-qlt-thumb.jpg" data-src="assets/img/blog/list/blog-list-2.jpg" class="tt-lazy anim-zoomin" alt="Image">
-											</figure>
-										</a>
-										<!-- End blog list item image -->
-										
-										<!-- Begin blog list item info -->
-										<div class="bli-info">
-											<div class="bli-categories">
-												<a href="blog-archive.html">Tutorials</a>
-												<!-- <a href="blog-archive.html">Uncategorized</a> -->
-											</div>
-											<h2 class="bli-title"><a href="blog-post.html">How to Outsource Web Development Tasks?</a></h2>
-											<div class="bli-meta"> 
-												<span class="published">May 24, 2021</span>
-												<span class="posted-by">- by <a href="blog-archive.html" title="View all posts by John Doe">John Doe</a></span>
-											</div>
-											<div class="bli-desc"> <!-- 3 lines is optimal! -->
-												It no longer makes sense for you to have a full-time web developer on your payroll in today’s interconnected world. Why
-												would you do that when you can get the best web developers through dedicated online platforms? Even though many
-												companies, big and small, understand the benefits of working with freelancers, they might not know...
-											</div>
-											<div class="bli-read-more tt-btn tt-btn-link">
-												<a href="blog-post.html" data-hover="Read More">Read More</a>
-											</div>
-										</div>
-										<!-- End blog list item info -->
-
-									</article>
-									<!-- End blog list item -->
-
-
-									<!-- Begin blog list item 
-									========================== -->
-									<article class="blog-list-item">
-								
-										<!-- Begin blog list item image -->
-										<a href="blog-post.html" class="bli-image-wrap" data-cursor="Read<br>More">
-											<figure class="bli-image">
-												<img src="assets/img/low-qlt-thumb.jpg" data-src="assets/img/blog/list/blog-list-3.jpg" class="tt-lazy anim-zoomin" alt="Image">
-											</figure>
-										</a>
-										<!-- End blog list item image -->
-										
-										<!-- Begin blog list item info -->
-										<div class="bli-info">
-											<div class="bli-categories">
-												<a href="blog-archive.html">Lifestyle</a>
-												<!-- <a href="blog-archive.html">Uncategorized</a> -->
-											</div>
-											<h2 class="bli-title"><a href="blog-post.html">What Is the Best Programming Language for Web Development In 2022?</a></h2>
-											<div class="bli-meta"> 
-												<span class="published">May 23, 2021</span>
-												<span class="posted-by">- by <a href="blog-archive.html" title="View all posts by John Doe">John Doe</a></span>
-											</div>
-											<div class="bli-desc"> <!-- 3 lines is optimal! -->
-												When you open a website, do you stop and think how efficient and good-looking it seems? Behind the operation of a
-												website is a programming language, which gives instructions to execute background processes and display graphics, text,
-												videos, and other elements through a browser. Generally speaking, there are two types of programmin language. One is...
-											</div>
-											<div class="bli-read-more tt-btn tt-btn-link">
-												<a href="blog-post.html" data-hover="Read More">Read More</a>
-											</div>
-										</div>
-										<!-- End blog list item info -->
-
-									</article>
-									<!-- End blog list item -->
-
-
-									<!-- Begin blog list item 
-									========================== -->
-									<article class="blog-list-item">
-								
-										<!-- Begin blog list item image -->
-										<a href="blog-post.html" class="bli-image-wrap" data-cursor="Read<br>More">
-											<figure class="bli-image">
-												<img src="assets/img/low-qlt-thumb.jpg" data-src="assets/img/blog/list/blog-list-4.jpg" class="tt-lazy anim-zoomin" alt="Image">
-											</figure>
-										</a>
-										<!-- End blog list item image -->
-										
-										<!-- Begin blog list item info -->
-										<div class="bli-info">
-											<div class="bli-categories">
-												<a href="blog-archive.html">Inspiration</a>
-												<!-- <a href="blog-archive.html">Uncategorized</a> -->
-											</div>
-											<h2 class="bli-title"><a href="blog-post.html">What is the difference between JPG and PNG?</a></h2>
-											<div class="bli-meta"> 
-												<span class="published">May 21, 2021</span>
-												<span class="posted-by">- by <a href="blog-archive.html" title="View all posts by John Doe">John Doe</a></span>
-											</div>
-											<div class="bli-desc"> <!-- 3 lines is optimal! -->
-												Choosing the right image format for a website is most important rather than only what is in the photos. If you go for
-												the wrong format, you may end up with a slow website, high bounce rate, and low conversion rate – and this is not
-												something you want, especially when it is easily avoided....
-											</div>
-											<div class="bli-read-more tt-btn tt-btn-link">
-												<a href="blog-post.html" data-hover="Read More">Read More</a>
-											</div>
-										</div>
-										<!-- End blog list item info -->
-
-									</article>
-									<!-- End blog list item -->
-
-
-									<!-- Begin blog list item 
-									========================== -->
-									<article class="blog-list-item">
-								
-										<!-- Begin blog list item image -->
-										<a href="blog-post.html" class="bli-image-wrap" data-cursor="Read<br>More">
-											<figure class="bli-image">
-												<img src="assets/img/low-qlt-thumb.jpg" data-src="assets/img/blog/list/blog-list-5.jpg" class="tt-lazy anim-zoomin" alt="Image">
-											</figure>
-										</a>
-										<!-- End blog list item image -->
-										
-										<!-- Begin blog list item info -->
-										<div class="bli-info">
-											<div class="bli-categories">
-												<a href="blog-archive.html">Tutorials</a>
-												<!-- <a href="blog-archive.html">Uncategorized</a> -->
-											</div>
-											<h2 class="bli-title"><a href="blog-post.html">What is website maintenance services, and how is it important for your business?</a></h2>
-											<div class="bli-meta"> 
-												<span class="published">May 19, 2021</span>
-												<span class="posted-by">- by <a href="blog-archive.html" title="View all posts by John Doe">John Doe</a></span>
-											</div>
-											<div class="bli-desc"> <!-- 3 lines is optimal! -->
-												Website maintenance is an important part of any business. It’s the act of keeping your website running smoothly and
-												securely. My target today is to clarify the basics of website maintenance services, so you can see if it’s what you need
-												for your business! Website Maintenance Services: What is it about? Have you ever felt like your...
-											</div>
-											<div class="bli-read-more tt-btn tt-btn-link">
-												<a href="blog-post.html" data-hover="Read More">Read More</a>
-											</div>
-										</div>
-										<!-- End blog list item info -->
-
-									</article>
-									<!-- End blog list item -->
-
-
-									<!-- Begin blog list item 
-									========================== -->
-									<article class="blog-list-item">
-								
-										<!-- Begin blog list item image -->
-										<a href="blog-post.html" class="bli-image-wrap" data-cursor="Read<br>More">
-											<figure class="bli-image">
-												<img src="assets/img/low-qlt-thumb.jpg" data-src="assets/img/blog/list/blog-list-5.jpg" class="tt-lazy anim-zoomin" alt="Image">
-											</figure>
-										</a>
-										<!-- End blog list item image -->
-										
-										<!-- Begin blog list item info -->
-										<div class="bli-info">
-											<div class="bli-categories">
-												<a href="blog-archive.html">Tutorials</a>
-												<!-- <a href="blog-archive.html">Uncategorized</a> -->
-											</div>
-											<h2 class="bli-title"><a href="blog-post.html">How to choose the best image format for website?</a></h2>
-											<div class="bli-meta"> 
-												<span class="published">May 19, 2021</span>
-												<span class="posted-by">- by <a href="blog-archive.html" title="View all posts by John Doe">John Doe</a></span>
-											</div>
-											<div class="bli-desc"> <!-- 3 lines is optimal! -->
-												Everybody loves to see pictures on websites. And relevant images can help explain things better. They can also represent
-												your brand and enhance the aesthetics of your website. But there are image formats like SVG, JPG, PNG, and more. So,
-												which one is the best image format for web? How to choose the graphic format that...
-											</div>
-											<div class="bli-read-more tt-btn tt-btn-link">
-												<a href="blog-post.html" data-hover="Read More">Read More</a>
-											</div>
-										</div>
-										<!-- End blog list item info -->
-
-									</article>
-									<!-- End blog list item -->
-
-
-									<!-- Begin blog list item 
-									========================== -->
-									<article class="blog-list-item">
-								
-										<!-- Begin blog list item image -->
-										<a href="blog-post.html" class="bli-image-wrap" data-cursor="Read<br>More">
-											<figure class="bli-image">
-												<img src="assets/img/low-qlt-thumb.jpg" data-src="assets/img/blog/list/blog-list-5.jpg" class="tt-lazy anim-zoomin" alt="Image">
-											</figure>
-										</a>
-										<!-- End blog list item image -->
-										
-										<!-- Begin blog list item info -->
-										<div class="bli-info">
-											<div class="bli-categories">
-												<a href="blog-archive.html">Tutorials</a>
-												<!-- <a href="blog-archive.html">Uncategorized</a> -->
-											</div>
-											<h2 class="bli-title"><a href="blog-post.html">Website Maintenance Services List</a></h2>
-											<div class="bli-meta"> 
-												<span class="published">May 19, 2021</span>
-												<span class="posted-by">- by <a href="blog-archive.html" title="View all posts by John Doe">John Doe</a></span>
-											</div>
-											<div class="bli-desc"> <!-- 3 lines is optimal! -->
-												– Turning Your Website into a Well-Oiled MachineNow that my WordPress website is developed, I can just sit back and reap
-												the benefits! If that’s what you think — much like I did — you’d be mistaken. Regardless of the technologies your
-												website utilizes, maintenance is a necessity. That statement holds true even if you...
-											</div>
-											<div class="bli-read-more tt-btn tt-btn-link">
-												<a href="blog-post.html" data-hover="Read More">Read More</a>
-											</div>
-										</div>
-										<!-- End blog list item info -->
-
-									</article>
-									<!-- End blog list item -->
+									</form>
+									<!-- End post comment form -->
 
 								</div>
-								<!-- End blog list -->
+								<!-- End post comments -->
 
 
 								<!-- Begin sliding sidebar 
@@ -807,7 +768,7 @@
 											<div class="sidebar-widget sidebar-search">
 												<h3 class="sidebar-heading">Search</h3>
 												
-												<!-- Begin form (Note: for design purposes only!)
+												<!-- Begin form (Note: for design purposes only!) 
 												================ 
 												* Use class "tt-form-filled" or "tt-form-minimal" to change form style.
 												* Use class "tt-form-sm" or "tt-form-lg" to change form size (no class = default size).
@@ -843,28 +804,28 @@
 												<ul class="list-unstyled">
 													<li>
 														<div class="sidebar-post-data">
-															<h5 class="sidebar-post-title"><a href="blog-post.html">Why Some People Almost Always Save Money With This Method</a></h5>
+															<h5 class="sidebar-post-title"><a href="">Why Some People Almost Always Save Money With This Method</a></h5>
 															<!-- <span class="sidebar-post-author">By: <a href="">John Doe</a></span> -->
 															<span class="sidebar-post-date">May 14, 2021</span>
 														</div>
 													</li>
 													<li>
 														<div class="sidebar-post-data">
-															<h5 class="sidebar-post-title"><a href="blog-post.html">Want to Step Up Your Skills? You Need to Read This First</a></h5>
+															<h5 class="sidebar-post-title"><a href="">Want to Step Up Your Skills? You Need to Read This First</a></h5>
 															<!-- <span class="sidebar-post-author">By: <a href="">John Doe</a></span> -->
 															<span class="sidebar-post-date">May 12, 2021</span>
 														</div>
 													</li>
 													<li>
 														<div class="sidebar-post-data">
-															<h5 class="sidebar-post-title"><a href="blog-post.html">Secrets to Getting Your Project to Complete Quickly and Efficiently</a></h5>
+															<h5 class="sidebar-post-title"><a href="">Secrets to Getting Your Project to Complete Quickly and Efficiently</a></h5>
 															<!-- <span class="sidebar-post-author">By: <a href="">Henry Harrison</a></span> -->
 															<span class="sidebar-post-date">May 17, 2021</span>
 														</div>
 													</li>
 													<li>
 														<div class="sidebar-post-data">
-															<h5 class="sidebar-post-title"><a href="blog-post.html">How to Win Friends and Influence People?</a></h5>
+															<h5 class="sidebar-post-title"><a href="">How to Win Friends and Influence People?</a></h5>
 															<!-- <span class="sidebar-post-author">By: <a href="">Henry Harrison</a></span> -->
 															<span class="sidebar-post-date">May 21, 2021</span>
 														</div>
@@ -956,38 +917,17 @@
 									</div> <!-- /.tt-sliding-sidebar -->
 
 									<!-- Begin sliding sidebar trigger -->
-									<div class="tt-sliding-sidebar-trigger">
+									<div class="tt-sliding-sidebar-trigger hide-cursor">
 										<span class="tt-ss-icon"><i class="fas fa-align-justify"></i></span>
 										<span class="tt-ss-icon-close"><i class="fas fa-times"></i></span>
 									</div>
 									<!-- End sliding sidebar trigger -->
 
 									<!-- Close overlay -->
-									<div class="tt-sliding-sidebar-close cursor-close" data-cursor="close"></div>
+									<div class="tt-sliding-sidebar-close cursor-close"></div>
 
 								</div> 
 								<!-- End sliding sidebar -->
-								
-
-								<!-- Begin tt-pagination 
-								========================= 
-								* Use class "tt-pagin-center" to align center.
-								-->
-								<div class="tt-pagination tt-pagin-center anim-fadeinup">
-									<div class="tt-pagin-prev">
-										<a href="" class="tt-pagin-item magnetic-item"><i class="fas fa-chevron-left"></i></a>
-									</div>
-									<div class="tt-pagin-numbers">
-										<a href="#0" class="tt-pagin-item magnetic-item active">1</a>
-										<a href="" class="tt-pagin-item magnetic-item">2</a>
-										<a href="" class="tt-pagin-item magnetic-item">3</a>
-										<a href="" class="tt-pagin-item magnetic-item">4</a>
-									</div>
-									<div class="tt-pagin-next">
-										<a href="" class="tt-pagin-item tt-pagin-next magnetic-item"><i class="fas fa-chevron-right"></i></a>
-									</div>
-								</div>
-								<!-- End tt-pagination -->
 
 							</div> <!-- /.tt-section-inner -->
 						</div>
@@ -1029,7 +969,7 @@
 
 					</div>
 					<!-- End page content -->
-					
+
 
 					<!-- ======================
 					///// Begin tt-footer /////
