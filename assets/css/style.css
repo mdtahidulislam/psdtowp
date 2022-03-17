@@ -187,3 +187,33 @@ div#projects {
 .blog-list-item a {
   cursor: none;
 }
+
+/* inner service pages */
+.ph-caption-title strong {
+  color: #fff;
+}
+
+.ph-caption-subtitle p strong {
+  opacity: 0.4;
+}
+
+@media (min-width: 768px) {
+  .ait .pli-image-col {
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .ait .pli-info-col {
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .ait.portfolio-list.pli-info-lg .pli-title {
+    font-size: calc(16px + 1vw);
+  }
+}
+
+.ait .pli-category {
+  font-size: calc(13px + 0.3vw);
+  font-weight: 100;
+}
