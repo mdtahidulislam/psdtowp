@@ -197,23 +197,48 @@ div#projects {
   opacity: 0.4;
 }
 
+@media (min-width: 991px) {
+}
+
 @media (min-width: 768px) {
   .ait .pli-image-col {
     -ms-flex: 0 0 50%;
     flex: 0 0 50%;
     max-width: 50%;
   }
+
   .ait .pli-info-col {
     -ms-flex: 0 0 50%;
     flex: 0 0 50%;
     max-width: 50%;
   }
-  .ait.portfolio-list.pli-info-lg .pli-title {
+
+  .aitl .pli-image-col {
+    -ms-flex: 0 0 40%;
+    flex: 0 0 40%;
+    max-width: 40%;
+  }
+
+  .aitl .pli-info-col {
+    -ms-flex: 0 0 60%;
+    flex: 0 0 60%;
+    max-width: 60%;
+  }
+
+  .ait.portfolio-list.pli-info-lg .pli-title,
+  .aitl.portfolio-list.pli-info-lg .pli-title {
     font-size: calc(16px + 1vw);
+  }
+  .aitl .pli-info {
+    padding-left: 8%;
+  }
+  .aitl.portfolio-list.pl-alter .portfolio-list-item:nth-child(even) .pli-info {
+    padding-right: 8%;
   }
 }
 
-.ait .pli-category {
+.ait .pli-category,
+.aitl .pli-category {
   font-size: calc(13px + 0.3vw);
   font-weight: 100;
 }
